@@ -1,0 +1,166 @@
+# MS Construction Services: performance config
+# Place this file in the site root (public_html/), next to index.html
+
+# Serve the static landing page by default (and keep this priority explicit
+# in case anything ever gets reinstalled at the root, e.g. WordPress).
+DirectoryIndex index.html index.php
+
+# Don't let visitors browse raw folder contents if an index.html is ever missing
+Options -Indexes
+
+# ---- Canonical host + protocol ----
+# Force https:// and force the non-www host (matches the canonical URLs used
+# sitewide in <link rel="canonical">). Without this, Google indexes
+# https://www.msconstruction.services/ as a separate URL from
+# https://msconstruction.services/, splitting ranking signals and impressions
+# between the two in Search Console.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) any www host -> https non-www (fixes protocol + www in one redirect)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # 2) plain http on the non-www host -> https
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ---- Old root-level guide URLs -> /guides/ (permanent) ----
+# These articles used to live at the site root (the old WordPress-style URLs).
+# 301 keeps any existing links and search rankings pointing at the new address.
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/damp-proof-course-in-house-construction/?$ https://msconstruction.services/guides/damp-proof-course-in-house-construction/
+  RedirectMatch 301 ^/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/?$ https://msconstruction.services/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/
+  RedirectMatch 301 ^/what-is-a-plinth-beam-and-why-is-it-important/?$ https://msconstruction.services/guides/what-is-a-plinth-beam-and-why-is-it-important/
+  RedirectMatch 301 ^/you-worry-about-that-white-stuff-on-your-brick-wall-reasons-and-consequences/?$ https://msconstruction.services/guides/you-worry-about-that-white-stuff-on-your-brick-wall-reasons-and-consequences/
+  RedirectMatch 301 ^/brick-rates-in-pakistan-types-quality-prices-factors-affecting-brick-rates/?$ https://msconstruction.services/guides/brick-rates-in-pakistan-types-quality-prices-factors-affecting-brick-rates/
+  RedirectMatch 301 ^/grey-structure-mistakes-to-avoid-during-house-construction/?$ https://msconstruction.services/guides/grey-structure-mistakes-to-avoid-during-house-construction/
+  RedirectMatch 301 ^/how-to-build-a-house-on-a-fixed-budget-in-lahore/?$ https://msconstruction.services/guides/how-to-build-a-house-on-a-fixed-budget-in-lahore/
+  RedirectMatch 301 ^/how-to-reduce-house-construction-costs-without-compromising-quality/?$ https://msconstruction.services/guides/how-to-reduce-house-construction-costs-without-compromising-quality/
+  RedirectMatch 301 ^/should-buying-a-house-vs-constructing-a-house-in-pakistan/?$ https://msconstruction.services/guides/should-buying-a-house-vs-constructing-a-house-in-pakistan/
+  RedirectMatch 301 ^/how-to-start-construction-in-bahria-town-lahore/?$ https://msconstruction.services/guides/how-to-start-construction-in-bahria-town-lahore/
+</IfModule>
+
+# ---- Merged duplicates: old root-level URLs -> the single page that now covers the topic (permanent) ----
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/5-marla-house-construction-cost-in-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/5-marla-house-construction-cost-in-lahore-pakistan/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/5-marla-house-construction-cost-in-lahore-complete-estimate-2026/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/construction-cost-of-5-marla-double-story-house-in-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/5-marla-double-story-house-construction-cost-in-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/single-story-construction-cost-of-5-marla-house-in-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/5-marla-house-construction-cost-in-bahria-town-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-bahria-town-lahore/
+  RedirectMatch 301 ^/5-marla-house-construction-cost-in-bahria-town-lahore-per-square-foot/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-bahria-town-lahore/
+  RedirectMatch 301 ^/5-marla-double-story-house-construction-cost-in-bahria-town-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-bahria-town-lahore/
+  RedirectMatch 301 ^/5-marla-grey-structure-house-cost-in-bahria-town-lahore/?$ https://msconstruction.services/guides/5-marla-house-construction-cost-in-bahria-town-lahore/
+  RedirectMatch 301 ^/5-marla-house-finishing-cost-in-pakistan-2025/?$ https://msconstruction.services/guides/5-marla-house-finishing-cost-in-lahore/
+  RedirectMatch 301 ^/10-marla-house-construction-cost-in-lahore/?$ https://msconstruction.services/guides/10-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/10-marla-house-construction-cost-in-lahore-complete-estimate-2026/?$ https://msconstruction.services/guides/10-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/single-story-construction-cost-of-10-marla-house-in-lahore/?$ https://msconstruction.services/guides/10-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/10-marla-house-construction-cost-in-bahria-town-lahore/?$ https://msconstruction.services/guides/10-marla-house-construction-cost-in-bahria-town-lahore/
+  RedirectMatch 301 ^/3-marla-house-construction-cost-in-lahore/?$ https://msconstruction.services/guides/3-marla-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/1-kanal-house-construction-cost-in-2026-grey-structure-and-finishing/?$ https://msconstruction.services/guides/1-kanal-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/1-kanal-house-construction-cost-in-lahore-complete-guide/?$ https://msconstruction.services/guides/1-kanal-house-construction-cost-in-lahore/
+  RedirectMatch 301 ^/grey-structure-cost-per-square-foot-in-lahore/?$ https://msconstruction.services/guides/grey-structure-cost-per-square-foot-in-lahore/
+  RedirectMatch 301 ^/construction-cost-per-square-foot-in-lahore-complete-guide/?$ https://msconstruction.services/services/pricing/
+  RedirectMatch 301 ^/turnkey-house-construction-cost-in-lahore/?$ https://msconstruction.services/services/turnkey-design-and-build/
+  RedirectMatch 301 ^/how-to-start-construction-in-bahria-town-lahore-complete-step-by-step-guide/?$ https://msconstruction.services/guides/how-to-start-construction-in-bahria-town-lahore/
+  RedirectMatch 301 ^/best-house-construction-companies-in-lahore/?$ https://msconstruction.services/company/best-construction-company-in-lahore/
+  RedirectMatch 301 ^/top-construction-company-in-pakistan/?$ https://msconstruction.services/company/best-construction-company-in-lahore/
+  RedirectMatch 301 ^/which-company-is-best-for-house-construction-in-lahore/?$ https://msconstruction.services/company/best-construction-company-in-lahore/
+  RedirectMatch 301 ^/which-company-is-best-for-house-construction-in-lahore-2/?$ https://msconstruction.services/company/best-construction-company-in-lahore/
+  RedirectMatch 301 ^/best-construction-companies-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/top-construction-companies-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/which-company-is-best-for-house-construction-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-companies-in-bahria-town-lahore-contact-number/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-companies-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-a/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-b/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-c/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-d/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-e/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-f/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-g/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-town-lahore-sector-h/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-a/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-b/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-c/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-d/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-e/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-services-in-bahria-town-lahore-sector-f/?$ https://msconstruction.services/areas/bahria-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-orchard-lahore/?$ https://msconstruction.services/areas/bahria-orchard-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-orchard-lahore-phase-1/?$ https://msconstruction.services/areas/bahria-orchard-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-orchard-lahore-phase-2/?$ https://msconstruction.services/areas/bahria-orchard-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-orchard-lahore-phase-3/?$ https://msconstruction.services/areas/bahria-orchard-lahore/
+  RedirectMatch 301 ^/construction-company-in-bahria-orchard-lahore-phase-4/?$ https://msconstruction.services/areas/bahria-orchard-lahore/
+  RedirectMatch 301 ^/construction-company-in-dha-lahore/?$ https://msconstruction.services/areas/dha-lahore/
+  RedirectMatch 301 ^/construction-company-in-dha-lahore-phase-6/?$ https://msconstruction.services/areas/dha-lahore/
+  RedirectMatch 301 ^/construction-company-in-dha-lahore-phase-7/?$ https://msconstruction.services/areas/dha-lahore/
+  RedirectMatch 301 ^/construction-company-in-dha-lahore-phase-8/?$ https://msconstruction.services/areas/dha-lahore/
+  RedirectMatch 301 ^/construction-company-in-dha-lahore-phase-9-town/?$ https://msconstruction.services/areas/dha-lahore/
+  RedirectMatch 301 ^/construction-company-in-etihad-town-lahore/?$ https://msconstruction.services/areas/etihad-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-etihad-town-lahore-phase-1/?$ https://msconstruction.services/areas/etihad-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-etihad-town-lahore-phase-2/?$ https://msconstruction.services/areas/etihad-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-etihad-town-lahore-phase-3/?$ https://msconstruction.services/areas/etihad-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-central-park-housing-scheme-lahore/?$ https://msconstruction.services/areas/central-park-housing-scheme/
+  RedirectMatch 301 ^/construction-company-in-central-park-housing-scheme-phase-2/?$ https://msconstruction.services/areas/central-park-housing-scheme/
+  RedirectMatch 301 ^/construction-company-in-central-park-housing-scheme-phase-3/?$ https://msconstruction.services/areas/central-park-housing-scheme/
+  RedirectMatch 301 ^/construction-company-in-al-kabir-town-lahore/?$ https://msconstruction.services/areas/al-kabir-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-al-kabir-town-lahore-phase-1/?$ https://msconstruction.services/areas/al-kabir-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-al-kabir-town-lahore-phase-3/?$ https://msconstruction.services/areas/al-kabir-town-lahore/
+  RedirectMatch 301 ^/construction-company-in-al-kabir-town-lahore-phase-2/?$ https://msconstruction.services/areas/al-kabir-town-phase2-lahore/
+  RedirectMatch 301 ^/construction-company-in-lake-city-lahore/?$ https://msconstruction.services/areas/lake-city-lahore/
+  RedirectMatch 301 ^/construction-companies-in-fazaia-housing-scheme-lahore/?$ https://msconstruction.services/areas/fazaia-housing-scheme-lahore/
+</IfModule>
+
+# Correct MIME type for WebP on older server configs
+AddType image/webp .webp
+
+# ---- Compression ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---- Browser caching ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp        "access plus 1 year"
+  ExpiresByType image/png         "access plus 1 year"
+  ExpiresByType image/jpeg        "access plus 1 year"
+  ExpiresByType image/svg+xml     "access plus 1 year"
+  ExpiresByType image/x-icon      "access plus 1 year"
+  ExpiresByType text/css          "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html         "access plus 1 hour"
+  ExpiresDefault                  "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # ---- Security headers ----
+  # Blocks clickjacking (this site being loaded inside someone else's <iframe>)
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # Stops browsers from guessing/misreading file types
+  Header always set X-Content-Type-Options "nosniff"
+  # Limits how much of our URL is leaked to third-party sites when a visitor clicks out
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Turns off unused browser features by default
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # Forces HTTPS on repeat visits, once HTTPS is confirmed working sitewide
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
