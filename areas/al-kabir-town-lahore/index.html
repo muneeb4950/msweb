@@ -52,19 +52,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://msconstruction.services/"},
-    {"@type":"ListItem","position":2,"name":"Areas We Serve","item":"https://msconstruction.services/areas/"},
-    {"@type":"ListItem","position":3,"name":"Al-Kabir Town Lahore","item":"https://msconstruction.services/areas/al-kabir-town-lahore/"}
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://msconstruction.services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Areas We Serve",
+      "item": "https://msconstruction.services/areas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Al-Kabir Town Lahore",
+      "item": "https://msconstruction.services/areas/al-kabir-town-lahore/"
+    }
+  ],
+  "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#breadcrumb"
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "GeneralContractor", "HomeAndConstructionBusiness"],
+  "@type": [
+    "LocalBusiness",
+    "GeneralContractor",
+    "HomeAndConstructionBusiness"
+  ],
   "@id": "https://msconstruction.services/#localbusiness",
   "name": "MS Construction Services",
-  "areaServed": { "@type": "Place", "name": "Al-Kabir Town Lahore" }
+  "areaServed": {
+    "@type": "Place",
+    "name": "Al-Kabir Town Lahore"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -74,9 +97,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Construction Services in Al-Kabir Town Lahore",
   "description": "Construction company serving Al-Kabir Town Lahore. Free site visit, fixed 24-hour quote, 30-day price lock, A+ grade materials since 1994.",
   "url": "https://msconstruction.services/areas/al-kabir-town-lahore/",
-  "provider": { "@id": "https://msconstruction.services/#localbusiness" },
-  "areaServed": { "@type": "Place", "name": "Al-Kabir Town Lahore" },
-  "serviceType": ["Gray Structure Construction", "House Construction", "Commercial Construction"]
+  "provider": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Al-Kabir Town Lahore"
+  },
+  "serviceType": [
+    "Gray Structure Construction",
+    "House Construction",
+    "Commercial Construction"
+  ],
+  "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#service",
+  "mainEntityOfPage": {
+    "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#webpage"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -84,12 +120,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Do you build in Al-Kabir Town Lahore?","acceptedAnswer":{"@type":"Answer","text":"Yes, we're actively taking on grey structure and house construction projects in Al-Kabir Town."}},
-    {"@type":"Question","name":"Is construction more affordable in Al-Kabir Town?","acceptedAnswer":{"@type":"Answer","text":"Plot prices in Al-Kabir Town tend to be more accessible than in premium societies, but our construction pricing and material quality (A+ grade) stay the same everywhere we build."}},
-    {"@type":"Question","name":"Do you offer grey structure only in Al-Kabir Town?","acceptedAnswer":{"@type":"Answer","text":"Yes, grey structure only or full turnkey house construction, both available with the same fixed, itemized quote and 30-day price lock."}},
-    {"@type":"Question","name":"How do I request a quote for Al-Kabir Town?","acceptedAnswer":{"@type":"Answer","text":"Get in touch on WhatsApp or at 0306-1982828 to arrange a free site visit, and a fixed, itemized quote for your Al-Kabir Town plot follows within 24 hours."}},
-    {"@type":"Question","name":"Does a lower plot price mean lower construction quality?","acceptedAnswer":{"@type":"Answer","text":"No. Our structural material specification, Maple Leaf Cement, Mughal Supreme Steel 60 Grade, semi special bricks, stays the same on every project regardless of society. Budget flexibility usually comes from finishing choices, not structural quality."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "Do you build in Al-Kabir Town Lahore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we're actively taking on grey structure and house construction projects in Al-Kabir Town."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is construction more affordable in Al-Kabir Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plot prices in Al-Kabir Town tend to be more accessible than in premium societies, but our construction pricing and material quality (A+ grade) stay the same everywhere we build."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer grey structure only in Al-Kabir Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, grey structure only or full turnkey house construction, both available with the same fixed, itemized quote and 30-day price lock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I request a quote for Al-Kabir Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Get in touch on WhatsApp or at 0306-1982828 to arrange a free site visit, and a fixed, itemized quote for your Al-Kabir Town plot follows within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a lower plot price mean lower construction quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Our structural material specification, Maple Leaf Cement, Mughal Supreme Steel 60 Grade, semi special bricks, stays the same on every project regardless of society. Budget flexibility usually comes from finishing choices, not structural quality."
+      }
+    }
+  ],
+  "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#faq",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#webpage"
+  },
+  "inLanguage": "en-PK"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#webpage",
+  "name": "Al-Kabir Town Lahore Construction | MS Construction",
+  "description": "Construction company serving Al-Kabir Town Lahore. Free site visit, fixed 24-hour quote, 30-day price lock, A+ grade materials since 1994.",
+  "url": "https://msconstruction.services/areas/al-kabir-town-lahore/",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/#website"
+  },
+  "about": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "inLanguage": "en-PK",
+  "dateModified": "2026-10-07",
+  "breadcrumb": {
+    "@id": "https://msconstruction.services/areas/al-kabir-town-lahore/#breadcrumb"
+  }
 }
 </script>
 </head>
@@ -101,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
     <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="120" height="120" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
+      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
       MS <span class="text-goldLight">Construction</span>&nbsp;Services
     </a>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -280,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- /AREA-CHIPS -->
   <div class="max-w-6xl mx-auto px-5 sm:px-6 mt-6 pt-6 border-t border-white/10">
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2">Popular Searches</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
         <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
@@ -292,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
         <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2 mt-4">Guides</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/guides/damp-proof-course-in-house-construction/" class="hover:text-goldLight transition">Damp Proof Course in House Construction</a>
         <a href="/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/" class="hover:text-goldLight transition">Vertical DPC: Where It Goes and Why</a>

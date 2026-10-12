@@ -52,19 +52,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://msconstruction.services/"},
-    {"@type":"ListItem","position":2,"name":"Areas We Serve","item":"https://msconstruction.services/areas/"},
-    {"@type":"ListItem","position":3,"name":"Lake City Lahore","item":"https://msconstruction.services/areas/lake-city-lahore/"}
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://msconstruction.services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Areas We Serve",
+      "item": "https://msconstruction.services/areas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lake City Lahore",
+      "item": "https://msconstruction.services/areas/lake-city-lahore/"
+    }
+  ],
+  "@id": "https://msconstruction.services/areas/lake-city-lahore/#breadcrumb"
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "GeneralContractor", "HomeAndConstructionBusiness"],
+  "@type": [
+    "LocalBusiness",
+    "GeneralContractor",
+    "HomeAndConstructionBusiness"
+  ],
   "@id": "https://msconstruction.services/#localbusiness",
   "name": "MS Construction Services",
-  "areaServed": { "@type": "Place", "name": "Lake City Lahore" }
+  "areaServed": {
+    "@type": "Place",
+    "name": "Lake City Lahore"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -74,9 +97,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Construction Services in Lake City Lahore",
   "description": "Gray structure and full house construction services in Lake City Lahore. Free site visit, fixed 24-hour quote, 30-day price lock, real client reviews.",
   "url": "https://msconstruction.services/areas/lake-city-lahore/",
-  "provider": { "@id": "https://msconstruction.services/#localbusiness" },
-  "areaServed": { "@type": "Place", "name": "Lake City Lahore" },
-  "serviceType": ["Gray Structure Construction", "House Construction", "Commercial Construction"]
+  "provider": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Lake City Lahore"
+  },
+  "serviceType": [
+    "Gray Structure Construction",
+    "House Construction",
+    "Commercial Construction"
+  ],
+  "@id": "https://msconstruction.services/areas/lake-city-lahore/#service",
+  "mainEntityOfPage": {
+    "@id": "https://msconstruction.services/areas/lake-city-lahore/#webpage"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -84,56 +120,154 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Do you specialize in grey structure in Lake City?","acceptedAnswer":{"@type":"Answer","text":"Grey structure is one of our most requested services in Lake City, and it's the stage several of our Google reviews specifically mention. We also handle full house construction from grey structure through finishing."}},
-    {"@type":"Question","name":"How long does house construction take in Lake City?","acceptedAnswer":{"@type":"Answer","text":"One recent client's 5 Marla house in Lake City was completed within 6 months. Larger plots take longer, confirmed at your free site visit based on your specific plot and drawings."}},
-    {"@type":"Question","name":"What plot sizes have you built in Lake City?","acceptedAnswer":{"@type":"Answer","text":"Our completed Lake City projects range from 5 Marla to 10 Marla houses, covering both grey structure only and full turnkey construction."}},
-    {"@type":"Question","name":"Can I see examples of your Lake City work?","acceptedAnswer":{"@type":"Answer","text":"We can share project details and photos during your site visit consultation, and we're adding more project photos to this page as clients share them with us."}},
-    {"@type":"Question","name":"Is Lake City's soil different from other parts of Lahore?","acceptedAnswer":{"@type":"Answer","text":"Most Lake City plots we've built on have consistent, predictable soil and drainage, which generally simplifies foundation planning compared to areas with more variable ground conditions. We still confirm site-specific conditions at your free site visit."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "Do you specialize in grey structure in Lake City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grey structure is one of our most requested services in Lake City, and it's the stage several of our Google reviews specifically mention. We also handle full house construction from grey structure through finishing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does house construction take in Lake City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One recent client's 5 Marla house in Lake City was completed within 6 months. Larger plots take longer, confirmed at your free site visit based on your specific plot and drawings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What plot sizes have you built in Lake City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our completed Lake City projects range from 5 Marla to 10 Marla houses, covering both grey structure only and full turnkey construction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see examples of your Lake City work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can share project details and photos during your site visit consultation, and we're adding more project photos to this page as clients share them with us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Lake City's soil different from other parts of Lahore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Lake City plots we've built on have consistent, predictable soil and drainage, which generally simplifies foundation planning compared to areas with more variable ground conditions. We still confirm site-specific conditions at your free site visit."
+      }
+    }
+  ],
+  "@id": "https://msconstruction.services/areas/lake-city-lahore/#faq",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/areas/lake-city-lahore/#webpage"
+  },
+  "inLanguage": "en-PK"
 }
 </script>
 <script type="application/ld+json">
 [
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://msconstruction.services/#localbusiness" },
-      "author": { "@type": "Person", "name": "Huaweicell 200" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "We recently had our 10 Marla house constructed in Lake City Lahore by MS Construction Services, and the entire experience was smooth and professional from start to finish. Site supervision was consistent, communication was excellent, and the final result exceeded our expectations."
+  {
+    "@type": "Review",
+    "itemReviewed": {
+      "@id": "https://msconstruction.services/#localbusiness"
     },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://msconstruction.services/#localbusiness" },
-      "author": { "@type": "Person", "name": "Minha Muneeb" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "We hired them for a 10 Marla house construction in Lake City Lahore and they're honestly the best construction company in Lahore with affordable rates. The quality of work, on-time delivery, and budget-friendly pricing made the whole process stress-free."
+    "author": {
+      "@type": "Person",
+      "name": "Huaweicell 200"
     },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "https://msconstruction.services/#localbusiness" },
-      "author": { "@type": "Person", "name": "Muhammad Bota" },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Really good experience, I built my 5 Marla house in Lake City and it was completed within 6 months."
-    }
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "reviewBody": "We recently had our 10 Marla house constructed in Lake City Lahore by MS Construction Services, and the entire experience was smooth and professional from start to finish. Site supervision was consistent, communication was excellent, and the final result exceeded our expectations."
+  },
+  {
+    "@type": "Review",
+    "itemReviewed": {
+      "@id": "https://msconstruction.services/#localbusiness"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Minha Muneeb"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "reviewBody": "We hired them for a 10 Marla house construction in Lake City Lahore and they're honestly the best construction company in Lahore with affordable rates. The quality of work, on-time delivery, and budget-friendly pricing made the whole process stress-free."
+  },
+  {
+    "@type": "Review",
+    "itemReviewed": {
+      "@id": "https://msconstruction.services/#localbusiness"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Bota"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "reviewBody": "Really good experience, I built my 5 Marla house in Lake City and it was completed within 6 months."
+  }
 ]
 </script>
 <script type="application/ld+json">
 [
-    {
-      "@type": "CreativeWork",
-      "name": "10 Marla House Construction, Lake City",
-      "description": "Full house construction from grey structure through finishing, as described in the client's Google review.",
-      "locationCreated": { "@type": "Place", "name": "Lake City, Lahore" },
-      "creator": { "@id": "https://msconstruction.services/#localbusiness" }
+  {
+    "@type": "CreativeWork",
+    "name": "10 Marla House Construction, Lake City",
+    "description": "Full house construction from grey structure through finishing, as described in the client's Google review.",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Lake City, Lahore"
     },
-    {
-      "@type": "CreativeWork",
-      "name": "5 Marla House Construction, Lake City",
-      "description": "Full house construction completed within 6 months, as described in the client's Google review.",
-      "locationCreated": { "@type": "Place", "name": "Lake City, Lahore" },
-      "creator": { "@id": "https://msconstruction.services/#localbusiness" }
+    "creator": {
+      "@id": "https://msconstruction.services/#localbusiness"
     }
+  },
+  {
+    "@type": "CreativeWork",
+    "name": "5 Marla House Construction, Lake City",
+    "description": "Full house construction completed within 6 months, as described in the client's Google review.",
+    "locationCreated": {
+      "@type": "Place",
+      "name": "Lake City, Lahore"
+    },
+    "creator": {
+      "@id": "https://msconstruction.services/#localbusiness"
+    }
+  }
 ]
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://msconstruction.services/areas/lake-city-lahore/#webpage",
+  "name": "Construction Company in Lake City Lahore | MS Construction",
+  "description": "Construction company in Lake City Lahore, where most of our completed houses stand. Free site visit and a fixed quote in 24 hours. Call today.",
+  "url": "https://msconstruction.services/areas/lake-city-lahore/",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/#website"
+  },
+  "about": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "inLanguage": "en-PK",
+  "dateModified": "2026-10-07",
+  "breadcrumb": {
+    "@id": "https://msconstruction.services/areas/lake-city-lahore/#breadcrumb"
+  }
+}
 </script>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
@@ -144,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
     <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="120" height="120" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
+      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
       MS <span class="text-goldLight">Construction</span>&nbsp;Services
     </a>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -357,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- /AREA-CHIPS -->
   <div class="max-w-6xl mx-auto px-5 sm:px-6 mt-6 pt-6 border-t border-white/10">
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2">Popular Searches</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
         <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
@@ -369,7 +503,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
         <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2 mt-4">Guides</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/guides/damp-proof-course-in-house-construction/" class="hover:text-goldLight transition">Damp Proof Course in House Construction</a>
         <a href="/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/" class="hover:text-goldLight transition">Vertical DPC: Where It Goes and Why</a>

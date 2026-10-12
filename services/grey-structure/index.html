@@ -52,10 +52,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://msconstruction.services/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://msconstruction.services/services/"},
-    {"@type":"ListItem","position":3,"name":"Grey Structure","item":"https://msconstruction.services/services/grey-structure/"}
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://msconstruction.services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://msconstruction.services/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Grey Structure",
+      "item": "https://msconstruction.services/services/grey-structure/"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/grey-structure/#breadcrumb"
 }
 </script>
 <script type="application/ld+json">
@@ -66,8 +82,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Grey Structure Construction",
   "description": "Grey structure (structural shell) construction in Lahore, Bahria Town, and Lake City using Maple Leaf Cement and Mughal Supreme Steel 60 Grade.",
   "url": "https://msconstruction.services/services/grey-structure/",
-  "provider": {"@id": "https://msconstruction.services/#localbusiness"},
-  "areaServed": [{"@type":"City","name":"Lahore"}, {"@type":"Place","name":"Bahria Town Lahore"}, {"@type":"Place","name":"Lake City Lahore"}]
+  "provider": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Bahria Town Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Lake City Lahore"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/grey-structure/#service",
+  "mainEntityOfPage": {
+    "@id": "https://msconstruction.services/services/grey-structure/#webpage"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -75,15 +110,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What's included in your grey structure package?","acceptedAnswer":{"@type":"Answer","text":"Excavation, foundation, DPC, RCC columns, beams and slabs, brickwork, and roof structure, built using Maple Leaf Cement, Mughal Supreme Steel 60 Grade, semi special bricks, and the other materials listed above. A written scope is provided with your fixed quote."}},
-    {"@type":"Question","name":"How long does grey structure construction take?","acceptedAnswer":{"@type":"Answer","text":"It depends on plot size. Grey structure alone is typically the first 6-8 weeks of a full construction timeline for a 5-10 Marla plot, though a 10 Marla grey-structure-only project we completed in Bahria Town BB Block took 100 days start to finish."}},
-    {"@type":"Question","name":"Do you provide site supervision during grey structure?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every site has 24/7 CCTV camera surveillance, and we personally check structural milestones, foundation depth, steel placement, slab thickness, before moving to the next stage."}},
-    {"@type":"Question","name":"Do you build grey structure in Bahria Town and Lake City?","acceptedAnswer":{"@type":"Answer","text":"Yes. Grey structure is one of our most requested services in Bahria Town (Sector A, C, and E) and Lake City, and we also take on projects across the rest of Lahore."}},
-    {"@type":"Question","name":"What steel grade do you use for grey structure?","acceptedAnswer":{"@type":"Answer","text":"Mughal Supreme Steel 60 Grade, sized to your specific structural drawings. We don't use a single default bar spacing across every plot size."}},
-    {"@type":"Question","name":"How do you prevent cracks and dampness in grey structure?","acceptedAnswer":{"@type":"Answer","text":"Correct DPC installation at plinth level, full concrete curing time rather than rushing it, and checking that upper floors align with the structure below rather than requiring makeshift transfer beams. These are the three most common causes of later structural problems, and all three are addressed during construction, not after."}},
-    {"@type":"Question","name":"How much does grey structure construction cost per square foot in Lahore?","acceptedAnswer":{"@type":"Answer","text":"As of September 25, 2026, our grey structure construction cost is approximately Rs 2,850 per square foot in Lahore. This is an indicative rate, and your exact per-square-foot cost is confirmed in a fixed, itemized quote after the free site visit, since site access, soil conditions, and specific structural requirements can affect it."}},
-    {"@type":"Question","name":"Does grey structure construction come with a warranty?","acceptedAnswer":{"@type":"Answer","text":"Yes. MS Construction Services provides a 10-year warranty on our construction work. Full warranty terms are confirmed in writing as part of your project agreement."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "What's included in your grey structure package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Excavation, foundation, DPC, RCC columns, beams and slabs, brickwork, and roof structure, built using Maple Leaf Cement, Mughal Supreme Steel 60 Grade, semi special bricks, and the other materials listed above. A written scope is provided with your fixed quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does grey structure construction take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on plot size. Grey structure alone is typically the first 6-8 weeks of a full construction timeline for a 5-10 Marla plot, though a 10 Marla grey-structure-only project we completed in Bahria Town BB Block took 100 days start to finish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide site supervision during grey structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every site has 24/7 CCTV camera surveillance, and we personally check structural milestones, foundation depth, steel placement, slab thickness, before moving to the next stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build grey structure in Bahria Town and Lake City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Grey structure is one of our most requested services in Bahria Town (Sector A, C, and E) and Lake City, and we also take on projects across the rest of Lahore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What steel grade do you use for grey structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mughal Supreme Steel 60 Grade, sized to your specific structural drawings. We don't use a single default bar spacing across every plot size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you prevent cracks and dampness in grey structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Correct DPC installation at plinth level, full concrete curing time rather than rushing it, and checking that upper floors align with the structure below rather than requiring makeshift transfer beams. These are the three most common causes of later structural problems, and all three are addressed during construction, not after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does grey structure construction cost per square foot in Lahore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of September 25, 2026, our grey structure construction cost is approximately Rs 2,850 per square foot in Lahore. This is an indicative rate, and your exact per-square-foot cost is confirmed in a fixed, itemized quote after the free site visit, since site access, soil conditions, and specific structural requirements can affect it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does grey structure construction come with a warranty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. MS Construction Services provides a 10-year warranty on our construction work. Full warranty terms are confirmed in writing as part of your project agreement."
+      }
+    }
+  ],
+  "@id": "https://msconstruction.services/services/grey-structure/#faq",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/services/grey-structure/#webpage"
+  },
+  "inLanguage": "en-PK"
 }
 </script>
 <script type="application/ld+json">
@@ -128,6 +224,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://msconstruction.services/services/grey-structure/#webpage",
+  "name": "Grey Structure Construction Lahore | MS Construction",
+  "description": "Grey structure construction in Lahore using Maple Leaf Cement and Mughal Supreme Steel. Fixed quote in 24 hours, 30-day price lock. Get a free estimate.",
+  "url": "https://msconstruction.services/services/grey-structure/",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/#website"
+  },
+  "about": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "inLanguage": "en-PK",
+  "dateModified": "2026-10-07",
+  "breadcrumb": {
+    "@id": "https://msconstruction.services/services/grey-structure/#breadcrumb"
+  }
+}
+</script>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
 <!-- Google Tag Manager (noscript) -->
@@ -137,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
     <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="120" height="120" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
+      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
       MS <span class="text-goldLight">Construction</span>&nbsp;Services
     </a>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -489,7 +606,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- /AREA-CHIPS -->
   <div class="max-w-6xl mx-auto px-5 sm:px-6 mt-6 pt-6 border-t border-white/10">
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2">Popular Searches</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
         <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
@@ -501,7 +618,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
         <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2 mt-4">Guides</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/guides/damp-proof-course-in-house-construction/" class="hover:text-goldLight transition">Damp Proof Course in House Construction</a>
         <a href="/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/" class="hover:text-goldLight transition">Vertical DPC: Where It Goes and Why</a>

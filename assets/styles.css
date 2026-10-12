@@ -20,3 +20,4 @@
 .align-top{vertical-align:top}
 .divide-y>:not([hidden])~:not([hidden]){border-top-width:1px;border-top-style:solid}
 .divide-amber-100>:not([hidden])~:not([hidden]){border-color:rgb(254 243 199)}
+.tracking-widest{letter-spacing:.1em}

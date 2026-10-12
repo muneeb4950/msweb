@@ -52,10 +52,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://msconstruction.services/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://msconstruction.services/services/"},
-    {"@type":"ListItem","position":3,"name":"Architectural Design Services in Lahore","item":"https://msconstruction.services/services/architectural-design/"}
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://msconstruction.services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://msconstruction.services/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Architectural Design Services in Lahore",
+      "item": "https://msconstruction.services/services/architectural-design/"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/architectural-design/#breadcrumb"
 }
 </script>
 <script type="application/ld+json">
@@ -66,8 +82,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Architectural Design Services in Lahore",
   "description": "Architectural design services in Lahore: floor plans, elevation design, and structural drawings prepared for DHA and society approval processes.",
   "url": "https://msconstruction.services/services/architectural-design/",
-  "provider": {"@id": "https://msconstruction.services/#localbusiness"},
-  "areaServed": [{"@type":"City","name":"Lahore"}, {"@type":"Place","name":"Bahria Town Lahore"}, {"@type":"Place","name":"Lake City Lahore"}]
+  "provider": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Bahria Town Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Lake City Lahore"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/architectural-design/#service",
+  "mainEntityOfPage": {
+    "@id": "https://msconstruction.services/services/architectural-design/#webpage"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -75,11 +110,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Do you design custom floor plans, or only standard layouts?","acceptedAnswer":{"@type":"Answer","text":"Custom, based on your plot dimensions and how you plan to use the space. We start with your requirements at the site visit, not a fixed template."}},
-    {"@type":"Question","name":"Can you get my drawings approved by DHA or Bahria Town?","acceptedAnswer":{"@type":"Answer","text":"Yes, we prepare drawings to each society's required format and support the approval submission itself, factoring the approval timeline into your project schedule."}},
-    {"@type":"Question","name":"Is architectural design included with construction, or is it separate?","acceptedAnswer":{"@type":"Answer","text":"It can be either. Design is available as a standalone service, or as the first stage of a full construction project with us, confirmed at your free site visit."}},
-    {"@type":"Question","name":"What should a structural drawing actually include?","acceptedAnswer":{"@type":"Answer","text":"Column and beam sizes, steel reinforcement details, footing depths, and slab thickness, not just a floor plan with wall lines. We check every drawing against what's practical to construct, not just what's technically compliant."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "Do you design custom floor plans, or only standard layouts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Custom, based on your plot dimensions and how you plan to use the space. We start with your requirements at the site visit, not a fixed template."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you get my drawings approved by DHA or Bahria Town?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we prepare drawings to each society's required format and support the approval submission itself, factoring the approval timeline into your project schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is architectural design included with construction, or is it separate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can be either. Design is available as a standalone service, or as the first stage of a full construction project with us, confirmed at your free site visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should a structural drawing actually include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Column and beam sizes, steel reinforcement details, footing depths, and slab thickness, not just a floor plan with wall lines. We check every drawing against what's practical to construct, not just what's technically compliant."
+      }
+    }
+  ],
+  "@id": "https://msconstruction.services/services/architectural-design/#faq",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/services/architectural-design/#webpage"
+  },
+  "inLanguage": "en-PK"
 }
 </script>
 <script type="application/ld+json">
@@ -124,6 +192,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://msconstruction.services/services/architectural-design/#webpage",
+  "name": "Architectural Design in Lahore | MS Construction",
+  "description": "Architectural design in Lahore: floor plans, elevations and structural drawings ready for society approval. Book a free site visit to start your design.",
+  "url": "https://msconstruction.services/services/architectural-design/",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/#website"
+  },
+  "about": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "inLanguage": "en-PK",
+  "dateModified": "2026-10-07",
+  "breadcrumb": {
+    "@id": "https://msconstruction.services/services/architectural-design/#breadcrumb"
+  }
+}
+</script>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
 <!-- Google Tag Manager (noscript) -->
@@ -133,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
     <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="120" height="120" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
+      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
       MS <span class="text-goldLight">Construction</span>&nbsp;Services
     </a>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -290,7 +379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- /AREA-CHIPS -->
   <div class="max-w-6xl mx-auto px-5 sm:px-6 mt-6 pt-6 border-t border-white/10">
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2">Popular Searches</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
         <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
@@ -302,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
         <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2 mt-4">Guides</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/guides/damp-proof-course-in-house-construction/" class="hover:text-goldLight transition">Damp Proof Course in House Construction</a>
         <a href="/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/" class="hover:text-goldLight transition">Vertical DPC: Where It Goes and Why</a>

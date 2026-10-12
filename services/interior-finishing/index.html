@@ -52,10 +52,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://msconstruction.services/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://msconstruction.services/services/"},
-    {"@type":"ListItem","position":3,"name":"Interior Finishing Services in Lahore","item":"https://msconstruction.services/services/interior-finishing/"}
-  ]
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://msconstruction.services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://msconstruction.services/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Interior Finishing Services in Lahore",
+      "item": "https://msconstruction.services/services/interior-finishing/"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/interior-finishing/#breadcrumb"
 }
 </script>
 <script type="application/ld+json">
@@ -66,8 +82,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Interior Finishing Services in Lahore",
   "description": "Interior finishing services in Lahore: flooring, electrical fittings, paint, and kitchen and bathroom fixtures. Available standalone or as part of full construction.",
   "url": "https://msconstruction.services/services/interior-finishing/",
-  "provider": {"@id": "https://msconstruction.services/#localbusiness"},
-  "areaServed": [{"@type":"City","name":"Lahore"}, {"@type":"Place","name":"Bahria Town Lahore"}, {"@type":"Place","name":"Lake City Lahore"}]
+  "provider": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Bahria Town Lahore"
+    },
+    {
+      "@type": "Place",
+      "name": "Lake City Lahore"
+    }
+  ],
+  "@id": "https://msconstruction.services/services/interior-finishing/#service",
+  "mainEntityOfPage": {
+    "@id": "https://msconstruction.services/services/interior-finishing/#webpage"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -75,11 +110,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Can I hire you for finishing only, on a structure someone else built?","acceptedAnswer":{"@type":"Answer","text":"Yes. We start with a site assessment to confirm the structure is finishing-ready, then provide the same fixed, itemized quote process we use for every project."}},
-    {"@type":"Question","name":"Do you handle kitchen and bathroom fixtures?","acceptedAnswer":{"@type":"Answer","text":"Yes, fixture specification and installation is part of our standard finishing scope, itemized in your quote by room."}},
-    {"@type":"Question","name":"What finishing material brands do you use?","acceptedAnswer":{"@type":"Answer","text":"Specific brands and grades are confirmed and itemized in your quote at the site visit, so what's specified is exactly what's installed, no substitutions without your approval."}},
-    {"@type":"Question","name":"Should I choose standard or imported fittings?","acceptedAnswer":{"@type":"Answer","text":"It depends on the room and your budget. Standard and imported options often look similar, with the real difference in durability and warranty support. We walk through where it's worth spending more at your site visit."}}
-  ]
+    {
+      "@type": "Question",
+      "name": "Can I hire you for finishing only, on a structure someone else built?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We start with a site assessment to confirm the structure is finishing-ready, then provide the same fixed, itemized quote process we use for every project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle kitchen and bathroom fixtures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, fixture specification and installation is part of our standard finishing scope, itemized in your quote by room."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What finishing material brands do you use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specific brands and grades are confirmed and itemized in your quote at the site visit, so what's specified is exactly what's installed, no substitutions without your approval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose standard or imported fittings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the room and your budget. Standard and imported options often look similar, with the real difference in durability and warranty support. We walk through where it's worth spending more at your site visit."
+      }
+    }
+  ],
+  "@id": "https://msconstruction.services/services/interior-finishing/#faq",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/services/interior-finishing/#webpage"
+  },
+  "inLanguage": "en-PK"
 }
 </script>
 <script type="application/ld+json">
@@ -124,6 +192,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://msconstruction.services/services/interior-finishing/#webpage",
+  "name": "Interior Finishing Services in Lahore | MS Construction",
+  "description": "Interior finishing in Lahore: flooring, electrical fittings, paint, kitchen and bathroom fixtures. Standalone or with full construction. Get a free quote.",
+  "url": "https://msconstruction.services/services/interior-finishing/",
+  "isPartOf": {
+    "@id": "https://msconstruction.services/#website"
+  },
+  "about": {
+    "@id": "https://msconstruction.services/#localbusiness"
+  },
+  "inLanguage": "en-PK",
+  "dateModified": "2026-10-07",
+  "breadcrumb": {
+    "@id": "https://msconstruction.services/services/interior-finishing/#breadcrumb"
+  }
+}
+</script>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
 <!-- Google Tag Manager (noscript) -->
@@ -133,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
     <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="120" height="120" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
+      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
       MS <span class="text-goldLight">Construction</span>&nbsp;Services
     </a>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -290,7 +379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <!-- /AREA-CHIPS -->
   <div class="max-w-6xl mx-auto px-5 sm:px-6 mt-6 pt-6 border-t border-white/10">
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2">Popular Searches</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
         <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
@@ -302,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
         <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
-    <div class="text-[11px] tracking-wider text-slate-500 uppercase mb-2 mt-4">Guides</div>
+    <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/guides/damp-proof-course-in-house-construction/" class="hover:text-goldLight transition">Damp Proof Course in House Construction</a>
         <a href="/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/" class="hover:text-goldLight transition">Vertical DPC: Where It Goes and Why</a>
