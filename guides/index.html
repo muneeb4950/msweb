@@ -31,21 +31,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/styles.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23JEMZ9Z3N"></script>
+<!-- Analytics: loaded after first interaction or 6 s after page load, to keep the main thread free -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-23JEMZ9Z3N');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-23JEMZ9Z3N');
+
+(function(){var done=false;
+function s(src){var e=document.createElement('script');e.async=true;e.src=src;document.head.appendChild(e);}
+function go(){if(done)return;done=true;
+ ['scroll','pointerdown','keydown','touchstart','mousemove'].forEach(function(t){removeEventListener(t,go);});
+ s('https://www.googletagmanager.com/gtag/js?id=G-23JEMZ9Z3N');
+ dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+ s('https://www.googletagmanager.com/gtm.js?id=GTM-MRFTVFX9');
+}
+['scroll','pointerdown','keydown','touchstart','mousemove'].forEach(function(t){addEventListener(t,go,{passive:true});});
+addEventListener('load',function(){setTimeout(go,6000);});
+})();
 </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MRFTVFX9');</script>
-<!-- End Google Tag Manager -->
 <title>House Construction Guides for Lahore | MS Construction</title>
 <script type="application/ld+json">
 {
@@ -77,6 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "HomeAndConstructionBusiness"
   ],
   "@id": "https://msconstruction.services/#localbusiness",
+  "image": "https://msconstruction.services/assets/og-image.jpg",
   "name": "MS Construction Services",
   "areaServed": {
     "@type": "City",
@@ -240,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Where can I read guides on house construction in Lahore?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This section collects our practical guides on structure, waterproofing, materials, budgeting and starting a project, written by a Lahore builder working since 1994."
+        "text": "This section collects our practical guides on structure, waterproofing, materials, budgeting and starting a project, written by a Lahore builder."
       }
     },
     {
@@ -298,6 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
       <a href="/" class="hover:text-goldLight transition">Home</a>
       <a href="/services/" class="hover:text-goldLight transition">Services</a>
+      <a href="/areas/" class="hover:text-goldLight transition">Areas</a>
       <a href="/projects/" class="hover:text-goldLight transition">Projects</a>
       <a href="/about/" class="hover:text-goldLight transition">About</a>
       <a href="/#faq" class="hover:text-goldLight transition">FAQs</a>
@@ -316,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="max-w-6xl mx-auto px-5 sm:px-6">
     <span class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out block text-gold font-bold text-xs tracking-[2px] uppercase mb-2.5">Guides</span>
     <h1 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-heading text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight mb-4 max-w-3xl">House Construction Guides for Lahore Homeowners</h1>
-    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-300 max-w-xl mb-7 text-[15px] sm:text-base">Straight answers on structure, moisture, materials, budgets and getting started, from a builder working in Lahore since 1994.</p>
+    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-300 max-w-xl mb-7 text-[15px] sm:text-base">Straight answers on structure, moisture, materials, budgets and getting started, from a Lahore builder.</p>
     <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-wrap gap-3">
       <a id="serviceWaBtn" href="https://wa.me/923061982828?text=Hello%2C%20I'd%20like%20a%20free%20site%20visit%20and%20quote%20for%20my%20project%20in%20Lahore." target="_blank" class="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsappDark text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">&#128172; Book a Free Site Visit</a>
       <a href="tel:+923061982828" class="inline-flex items-center gap-2 border border-white/30 hover:border-white hover:bg-white/10 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">&#128222; Call 0306-1982828</a>
@@ -328,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-heading text-2xl sm:text-3xl font-extrabold text-navy mb-3 tracking-tight">Read Before You Build</h2>
     <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out w-16 h-[3px] bg-gold mb-8 rounded-full"></div>
     <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">Building a house is a long chain of decisions, and most of the expensive mistakes are made early, by owners who did not know what to ask. These guides exist to fix that. They explain the parts of construction that are usually skipped over in a quote: the layers you cannot see after plastering, the choices that change your budget and the steps that come before a contractor lifts a shovel.</p>
-    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">We are a Lahore construction company that has been building since 1994, so the advice here comes from work on real sites in real societies. We write about what we have seen go wrong as readily as what goes right, because that is more useful to you than a polished brochure.</p>
+    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">We are a Lahore construction company, so the advice here comes from work on real sites in real societies. We write about what we have seen go wrong as readily as what goes right, because that is more useful to you than a polished brochure.</p>
     <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">The guides fall into four groups. The technical ones explain structure and moisture protection. The budget ones help you decide what to build and how to pay for it. The cost guides give worked estimates for each plot size. The area guide covers the practical side of starting in a specific society. Each links to related guides and to the service pages that put the advice into practice, so you can move from reading to a free site visit whenever you are ready.</p>
   </div>
 </section>
@@ -353,6 +357,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/guides/you-worry-about-that-white-stuff-on-your-brick-wall-reasons-and-consequences/" class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out block bg-bg rounded-2xl p-6 shadow-md shadow-slate-900/5 border border-amber-100 hover:-translate-y-1.5 hover:shadow-xl transition duration-200">
         <h3 class="font-heading text-navy text-[15.5px] font-bold mb-1.5">White Powder on Brick Walls: Causes and Prevention</h3>
         <p class="text-slate-500 text-sm mb-3">What causes it, whether it is harmful and how to stop it, with 14 FAQs.</p>
+        <span class="text-gold font-bold text-sm">Read guide &rarr;</span>
+      </a>
+      <a href="/guides/building-material-rates-in-lahore/" class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out block bg-bg rounded-2xl p-6 shadow-md shadow-slate-900/5 border border-amber-100 hover:-translate-y-1.5 hover:shadow-xl transition duration-200">
+        <h3 class="font-heading text-navy text-[15.5px] font-bold mb-1.5">Building Material Rates in Lahore</h3>
+        <p class="text-slate-500 text-sm mb-3">Steel, cement, bricks, crush and sand, each with a date and source.</p>
         <span class="text-gold font-bold text-sm">Read guide &rarr;</span>
       </a>
       <a href="/guides/brick-rates-in-pakistan-types-quality-prices-factors-affecting-brick-rates/" class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out block bg-bg rounded-2xl p-6 shadow-md shadow-slate-900/5 border border-amber-100 hover:-translate-y-1.5 hover:shadow-xl transition duration-200">
@@ -460,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="py-14 bg-white"><div class="max-w-4xl mx-auto px-5 sm:px-6">
     <h2 class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out font-heading text-2xl sm:text-3xl font-extrabold text-navy mb-3 tracking-tight">From Reading to Building</h2>
     <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out w-16 h-[3px] bg-gold mb-8 rounded-full"></div>
-    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">Once you know what you want, the next step is a price. Our <a href="/services/pricing/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">rate card</a> lists the scopes per square foot, and our <a href="/services/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">services</a> cover grey structure, house construction, finishing and turnkey delivery. If you are choosing a builder, see what a <a href="/company/construction-company-in-lahore/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">construction company in Lahore</a> should show you, and what makes the <a href="/company/best-construction-company-in-lahore/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">best construction company in Lahore</a> in checkable terms. Building inside a society? Visit the <a href="/areas/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">areas we serve</a> for how each one works.</p>
+    <p class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out text-slate-600 text-[15px] sm:text-base leading-relaxed mb-4">Once you know what you want, the next step is a price. Our <a href="/services/pricing/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">rate card</a> lists the scopes per square foot, and our <a href="/services/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">services</a> cover grey structure, house construction, finishing and turnkey delivery. If you are choosing a builder, see what a <a href="/company/construction-company-in-lahore/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">construction company in Lahore</a> should show you, and what makes the <a href="/company/best-construction-company-in-lahore/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">right construction company in Lahore</a> in checkable terms. Building inside a society? Visit the <a href="/areas/" class="text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition">areas we serve</a> for how each one works.</p>
   </div></section>
 <section id="faq" class="py-16 sm:py-20 bg-bg">
   <div class="max-w-4xl mx-auto px-5 sm:px-6">
@@ -470,7 +479,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out bg-white rounded-2xl p-6 shadow-md shadow-slate-900/5 border border-amber-100">
         <h3 class="font-heading text-navy text-[15.5px] sm:text-base font-bold mb-2">Where can I read guides on house construction in Lahore?</h3>
-        <p class="text-slate-600 text-sm sm:text-[14.5px]">This section collects our practical guides on structure, waterproofing, materials, budgeting and starting a project, written by a Lahore builder working since 1994.</p>
+        <p class="text-slate-600 text-sm sm:text-[14.5px]">This section collects our practical guides on structure, waterproofing, materials, budgeting and starting a project, written by a Lahore builder.</p>
       </div>
       <div class="reveal opacity-0 translate-y-6 transition-all duration-700 ease-out bg-white rounded-2xl p-6 shadow-md shadow-slate-900/5 border border-amber-100">
         <h3 class="font-heading text-navy text-[15.5px] sm:text-base font-bold mb-2">Are these guides only for Lahore?</h3>
@@ -506,7 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="max-w-6xl mx-auto px-5 sm:px-6 flex flex-col sm:flex-row items-center sm:justify-between gap-4 text-center sm:text-left">
     <div>
       <img src="/assets/logo-wordmark.webp" alt="MS Construction Services - From Dream To Reality" width="600" height="248" loading="lazy" decoding="async" class="h-10 sm:h-12 object-contain mb-3 mx-auto sm:mx-0">
-      <div><strong class="text-white">MS Construction Services</strong> · Gray Structure, House &amp; Commercial Construction<br>Serving Lahore, Pakistan · Since 1994</div>
+      <div><strong class="text-white">MS Construction Services</strong> · Grey Structure, House &amp; Commercial Construction<br>Serving Lahore, Pakistan</div>
     </div>
     <div class="flex flex-col sm:items-end gap-2">
       <div>📞 0306-1982828 &nbsp;|&nbsp; 💬 WhatsApp available</div>
@@ -566,14 +575,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2">Popular Searches</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">
         <a href="/company/construction-company-in-lahore/" class="hover:text-goldLight transition">Construction Company in Lahore</a>
-        <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Best Construction Company in Lahore</a>
+        <a href="/company/best-construction-company-in-lahore/" class="hover:text-goldLight transition">Choosing a Construction Company in Lahore</a>
         <a href="/company/home-construction-company-in-lahore/" class="hover:text-goldLight transition">Home Construction Company in Lahore</a>
         <a href="/areas/dha-lahore/" class="hover:text-goldLight transition">Construction Company in DHA Lahore</a>
-        <a href="/areas/bahria-town-lahore/" class="hover:text-goldLight transition">Best Construction Company in Bahria Town Lahore</a>
+        <a href="/areas/bahria-town-lahore/" class="hover:text-goldLight transition">Construction Company in Bahria Town Lahore</a>
         <a href="/company/contractor-in-lahore/" class="hover:text-goldLight transition">Contractor in Lahore</a>
+        <a href="/services/" class="hover:text-goldLight transition">All Construction Services</a>
         <a href="/services/pricing/" class="hover:text-goldLight transition">Construction Cost in Lahore Per Sq Ft</a>
         <a href="/services/overseas-pakistanis/" class="hover:text-goldLight transition">Build a House in Lahore From Abroad</a>
-        <a href="/company/home-builder-in-lahore/" class="hover:text-goldLight transition">Home Builder in Lahore</a>
     </div>
     <div class="text-[11px] tracking-wider text-slate-400 uppercase mb-2 mt-4">Guides</div>
     <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[12.5px] text-slate-400">

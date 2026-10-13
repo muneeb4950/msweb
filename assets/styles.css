@@ -21,3 +21,10 @@
 .divide-y>:not([hidden])~:not([hidden]){border-top-width:1px;border-top-style:solid}
 .divide-amber-100>:not([hidden])~:not([hidden]){border-color:rgb(254 243 199)}
 .tracking-widest{letter-spacing:.1em}
+/* mobile usability: 12px minimum text, 44px-high tap targets for stacked footer links and the Google reviews link */
+@media (max-width:767px){
+.text-\[11px\]{font-size:12px}
+footer a{display:inline-block;padding-top:.7rem;padding-bottom:.7rem;line-height:1.3}
+footer .area-chips a{padding-top:.55rem;padding-bottom:.55rem}
+a[href*="maps.app.goo.gl"]{display:inline-block;padding-top:.7rem;padding-bottom:.7rem}
+}

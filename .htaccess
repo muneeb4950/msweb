@@ -30,6 +30,8 @@ Options -Indexes
 # These articles used to live at the site root (the old WordPress-style URLs).
 # 301 keeps any existing links and search rankings pointing at the new address.
 <IfModule mod_alias.c>
+  # Merged into the home construction company page
+  RedirectMatch 301 ^/company/home-builder-in-lahore/?$ https://msconstruction.services/company/home-construction-company-in-lahore/
   RedirectMatch 301 ^/damp-proof-course-in-house-construction/?$ https://msconstruction.services/guides/damp-proof-course-in-house-construction/
   RedirectMatch 301 ^/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/?$ https://msconstruction.services/guides/why-do-we-use-vertical-dpc-where-is-it-placed-and-what-is-its-purpose/
   RedirectMatch 301 ^/what-is-a-plinth-beam-and-why-is-it-important/?$ https://msconstruction.services/guides/what-is-a-plinth-beam-and-why-is-it-important/
