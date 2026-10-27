@@ -1,0 +1,121 @@
+{
+ "modern-grey-facade-concept": {
+  "640": {
+   "width": 640,
+   "height": 520,
+   "bytes": 21800
+  },
+  "1280": {
+   "width": 1024,
+   "height": 832,
+   "bytes": 37376
+  },
+  "orig": {
+   "width": 1024,
+   "height": 832,
+   "bytes": 34322
+  }
+ },
+ "modern-tiled-facade-day-concept": {
+  "640": {
+   "width": 640,
+   "height": 480,
+   "bytes": 36976
+  },
+  "1280": {
+   "width": 1200,
+   "height": 900,
+   "bytes": 122754
+  },
+  "orig": {
+   "width": 1200,
+   "height": 900,
+   "bytes": 162064
+  }
+ },
+ "modern-tiled-facade-night-concept": {
+  "640": {
+   "width": 640,
+   "height": 480,
+   "bytes": 25876
+  },
+  "1280": {
+   "width": 1200,
+   "height": 900,
+   "bytes": 114226
+  },
+  "orig": {
+   "width": 1200,
+   "height": 900,
+   "bytes": 162614
+  }
+ },
+ "classical-facade-concept": {
+  "640": {
+   "width": 640,
+   "height": 418,
+   "bytes": 37324
+  },
+  "1280": {
+   "width": 1080,
+   "height": 706,
+   "bytes": 93234
+  },
+  "orig": {
+   "width": 1080,
+   "height": 706,
+   "bytes": 116372
+  }
+ },
+ "classical-facade-night-concept": {
+  "640": {
+   "width": 640,
+   "height": 454,
+   "bytes": 30112
+  },
+  "1280": {
+   "width": 1280,
+   "height": 908,
+   "bytes": 82862
+  },
+  "orig": {
+   "width": 1600,
+   "height": 1135,
+   "bytes": 194124
+  }
+ },
+ "contemporary-black-white-facade-concept": {
+  "640": {
+   "width": 640,
+   "height": 408,
+   "bytes": 31996
+  },
+  "1280": {
+   "width": 1080,
+   "height": 689,
+   "bytes": 77324
+  },
+  "orig": {
+   "width": 1080,
+   "height": 689,
+   "bytes": 98842
+  }
+ },
+ "arched-window-house-photo": {
+  "640": {
+   "width": 415,
+   "height": 739,
+   "bytes": 41184
+  },
+  "1280": {
+   "width": 415,
+   "height": 739,
+   "bytes": 41184
+  },
+  "orig": {
+   "width": 415,
+   "height": 739,
+   "bytes": 42264
+  }
+ }
+}

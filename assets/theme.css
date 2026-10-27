@@ -1,0 +1,129 @@
+/* MS Construction: design layer. Loaded after styles.css, so it restyles the existing markup sitewide.
+   Direction: architectural and editorial. Flat surfaces, hairline borders, one serif for headings, one accent. */
+:root{
+  --ink:#0F1722; --navy:#0E1E38; --paper:#FAF8F4; --stone:#E7E1D4; --mute:#5B6573;
+  --brass:#8A6414; --gold:#D4A13D; --wa:#1FA855;
+  --serif:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
+  --r:6px;
+}
+html{scroll-padding-top:84px}
+body{background:var(--paper);color:var(--ink);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+/* Type */
+.font-heading,h1,h2,h3{font-family:var(--serif)}
+h1,h2{font-weight:600!important;letter-spacing:-.015em!important;line-height:1.12!important;font-optical-sizing:auto}
+h1{font-size:clamp(2.1rem,4.6vw,3.5rem)!important}
+h2{font-size:clamp(1.65rem,3vw,2.35rem)!important}
+h3{font-weight:600!important;letter-spacing:-.005em}
+main p,main li{font-size:1.0625rem;line-height:1.72}
+main p.text-sm,main li.text-sm,main .text-sm p{font-size:.95rem;line-height:1.6}
+.max-w-4xl p{max-width:68ch}
+
+/* Headings read left-aligned like an article; no decorative bars */
+section h2.text-center,section h2.text-center+p,section .text-center>h2{text-align:left}
+section h2.text-center+p.mx-auto,section p.max-w-2xl.mx-auto{margin-left:0;margin-right:0}
+div.w-16.h-\[3px\]{display:none}
+section .text-center>span.text-gold,section>div>span.text-gold.uppercase{display:block}
+
+/* Eyebrows */
+.tracking-wider.uppercase,.tracking-widest.uppercase,[class*="tracking-\[0."]{color:var(--brass)!important;font-weight:700}
+.text-gold{color:var(--brass)}
+.bg-navy .text-gold,.from-navy .text-gold,.bg-navyDark .text-gold{color:#E3B864}
+
+/* Header: light, hairline, no blur */
+header.sticky{background:rgba(250,248,244,.94)!important;color:var(--ink)!important;backdrop-filter:saturate(1.4) blur(10px);box-shadow:none!important;border-bottom:1px solid var(--stone)}
+header.sticky a{color:var(--ink)}
+header.sticky .text-goldLight{color:var(--brass)}
+header.sticky nav a{color:#394150;font-weight:600}
+header.sticky nav a:hover{color:var(--brass)}
+header.sticky a[href^="tel:"]{border:1px solid var(--ink)!important;color:var(--ink)!important;background:transparent;border-radius:var(--r)}
+header.sticky a[href^="tel:"]:hover{background:var(--ink)!important;color:#fff!important}
+header.sticky .font-heading{font-weight:700;letter-spacing:-.01em}
+
+/* Hero: flat navy with a blueprint grid, no gradient blobs */
+section.bg-gradient-to-br.from-navy{background-color:var(--navy)!important;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px}
+section.bg-gradient-to-br.from-navy .blur-3xl{display:none}
+section.bg-gradient-to-br.from-navy h1{color:#fff}
+section.bg-gradient-to-br.from-navy .text-goldLight,section.bg-gradient-to-br.from-navy h1 span{color:#E3B864}
+.rounded-full.border.border-gold\/40{border-radius:var(--r);background:transparent;border-color:rgba(227,184,100,.5)}
+
+/* Surfaces: hairline borders, small radius, no soft shadows */
+.rounded-2xl,.rounded-xl,.rounded-3xl{border-radius:10px!important}
+.rounded-lg{border-radius:var(--r)!important}
+[class*="shadow-"]:not(.shadow-2xl){box-shadow:none!important}
+.border-amber-100,.border-slate-100,.border-slate-200{border-color:var(--stone)!important}
+a.block.rounded-2xl,div.rounded-2xl.border{background:#fff!important;border:1px solid var(--stone)!important}
+a.block.rounded-2xl:hover{transform:none!important;border-color:var(--ink)!important}
+a.block.rounded-2xl h3{transition:color .15s}
+a.block.rounded-2xl:hover h3{color:var(--brass)}
+
+/* Decorative emoji tiles are dropped; typography carries the cards */
+div.w-12.h-12[aria-hidden="true"],div.w-11.h-11[aria-hidden="true"],div.w-10.h-10[aria-hidden="true"]{display:none}
+
+/* Sections: even rhythm, divider lines instead of alternating fills */
+section.py-14,section.py-16,section.py-20{padding-top:4rem!important;padding-bottom:4rem!important}
+section.bg-white{background:#fff}
+main>section+section:not([class*="from-navy"]):not(.mstrust){border-top:1px solid var(--stone)}
+
+/* Buttons */
+a.bg-whatsapp,a.bg-gold,button.bg-gold,button.bg-whatsapp{border-radius:var(--r)!important;font-weight:700;letter-spacing:.005em}
+a.bg-whatsapp{background:var(--wa)!important}
+a.bg-whatsapp:hover{background:#188a46!important}
+a.bg-gold{background:var(--gold)!important;color:var(--ink)!important}
+.ic{width:1.15em;height:1.15em;fill:currentColor;vertical-align:-.2em;flex:none}
+#floatWaBtn{background:var(--wa)!important;box-shadow:0 6px 20px rgba(15,23,34,.28)!important;animation:none!important;width:56px!important;height:56px!important}
+#floatWaBtn .ic{width:30px;height:30px}
+
+/* Trust strip under page heroes */
+.mstrust{background:var(--paper);border-bottom:1px solid var(--stone)}
+.mstrust ul{list-style:none;margin:0 auto;padding:0;max-width:72rem;display:grid;grid-template-columns:repeat(2,1fr)}
+.mstrust li{padding:.95rem 1.25rem;font-size:.9rem!important;line-height:1.35!important;color:var(--mute);border-right:1px solid var(--stone)}
+.mstrust li:nth-child(2n){border-right:0}
+.mstrust li:nth-child(n+3){border-top:1px solid var(--stone)}
+.mstrust strong{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink)}
+@media(min-width:768px){.mstrust ul{grid-template-columns:repeat(4,1fr)}.mstrust li{border-right:1px solid var(--stone)!important;border-top:0!important}.mstrust li:last-child{border-right:0!important}}
+
+/* Callout boxes */
+.bg-bg.rounded-2xl.border{background:#fff!important;border:1px solid var(--stone)!important;border-left:3px solid var(--brass)!important;border-radius:var(--r)!important}
+
+/* FAQ */
+details{border-radius:var(--r)}
+details summary{font-family:var(--serif);font-weight:600}
+
+/* Footer */
+footer.bg-navyDark{background:var(--ink)!important}
+
+/* Focus visibility */
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* Fixes after first visual review */
+header.sticky img[src*="logo-icon"]{background:var(--navy);padding:4px;border-radius:var(--r);width:2.25rem;height:2.25rem}
+[class*="from-navy"] div.rounded-2xl,[class*="from-navy"] div.rounded-xl,.bg-navy div.rounded-2xl{background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.18)!important}
+[class*="from-navy"] .text-gold,[class*="from-navy"] .text-goldLight{color:#E3B864}
+div.w-11.h-11.rounded-xl.bg-red-50,div.w-14.h-14.rounded-2xl.mx-auto,.bg-bg.rounded-2xl.border>.text-2xl.shrink-0{display:none}
+a .ic,button .ic{color:inherit}
+a[href^="tel:"] .ic,a[href^="https://wa.me"] .ic{color:currentColor}
+span.text-pink-500 .ic,.text-pink-500 .ic,.text-rose-500 .ic{color:inherit}
+
+/* Facade gallery */
+.msgal{padding:4rem 0;background:#fff;border-top:1px solid var(--stone)}
+.msgal-eyebrow{display:block;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:.6rem}
+.msgal h2{margin:0 0 .75rem}
+.msgal-lead-p{max-width:62ch;color:var(--mute);margin:0 0 2rem}
+.msgal-lead-p a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.msgal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.msgal-item{position:relative;margin:0;overflow:hidden;border-radius:8px;background:var(--stone);aspect-ratio:4/3}
+.msgal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.msgal-item:hover img{transform:scale(1.03)}
+.msgal-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .85rem .7rem;font-size:.85rem;line-height:1.3;color:#fff;font-weight:600;background:linear-gradient(to top,rgba(10,16,26,.72),rgba(10,16,26,0))}
+.msgal-lead{grid-column:1/-1;aspect-ratio:16/10}
+.msgal-tall img{object-position:center 40%}
+@media(min-width:1024px){
+  .msgal-grid{grid-template-columns:repeat(4,1fr);grid-template-rows:230px 230px 320px;gap:12px}
+  .msgal-item{aspect-ratio:auto}
+  .msgal-lead{grid-column:span 2;grid-row:span 2}
+  .msgal-tall{grid-row:span 2}
+  .msgal-wide{grid-column:span 2}
+}
+@media(prefers-reduced-motion:reduce){.msgal-item img{transition:none}.msgal-item:hover img{transform:none}}
