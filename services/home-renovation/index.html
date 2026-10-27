@@ -210,6 +210,7 @@ addEventListener('load',function(){setTimeout(go,6000);});
   }
 }
 </script>
+<style id="msbar-css">.msbar{display:none}@media(max-width:639px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}.msbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#0E1E38;box-shadow:0 -4px 16px rgba(0,0,0,.25)}.msbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;font:700 15px/1 Inter,system-ui,sans-serif;text-decoration:none;color:#fff}.msbar .msbar-call{background:transparent;border:1.5px solid rgba(255,255,255,.5)}.msbar .msbar-wa{background:#25D366}.msbar a:focus-visible{outline:3px solid #D4A13D;outline-offset:2px}}</style>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
 <!-- Google Tag Manager (noscript) -->
@@ -479,5 +480,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     mapFacade.addEventListener('keypress', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadMap(); } });
   }
 </script>
+<nav class="msbar" id="msbar" aria-label="Quick contact"><a class="msbar-call" href="tel:+923061982828">Call now</a><a class="msbar-wa" href="https://wa.me/923061982828?text=Hello%2C%20I%27d%20like%20a%20free%20site%20visit%20and%20quote%20from%20MS%20Construction%20Services." target="_blank" rel="noopener">WhatsApp quote</a></nav>
 </body>
 </html>

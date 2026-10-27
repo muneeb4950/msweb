@@ -1,3 +1,5 @@
 *.pyc
 __pycache__/
 msconstruction-all-urls.csv
+node_modules/
+src-ui/node_modules/

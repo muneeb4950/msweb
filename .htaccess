@@ -26,6 +26,11 @@ Options -Indexes
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+# ---- Build sources are not part of the public site ----
+<IfModule mod_alias.c>
+  RedirectMatch 404 ^/src-ui(/|$)
+</IfModule>
+
 # ---- Old root-level guide URLs -> /guides/ (permanent) ----
 # These articles used to live at the site root (the old WordPress-style URLs).
 # 301 keeps any existing links and search rankings pointing at the new address.
