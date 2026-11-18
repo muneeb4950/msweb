@@ -1,8 +1,8 @@
 /* MS Construction: design layer. Loaded after styles.css, so it restyles the existing markup sitewide.
    Direction: architectural and editorial. Flat surfaces, hairline borders, one serif for headings, one accent. */
 :root{
-  --ink:#0F1722; --navy:#0E1E38; --paper:#FAF8F4; --stone:#E7E1D4; --mute:#5B6573;
-  --brass:#8A6414; --gold:#D4A13D; --wa:#1FA855;
+  --ink:#071b2b; --navy:#071b2b; --paper:#EEEEEE; --stone:#cfe0e3; --mute:#5B6573;
+  --brass:#0f6573; --gold:#167d8d; --wa:#1FA855;
   --serif:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
   --r:6px;
 }
@@ -28,10 +28,10 @@ section .text-center>span.text-gold,section>div>span.text-gold.uppercase{display
 /* Eyebrows */
 .tracking-wider.uppercase,.tracking-widest.uppercase,[class*="tracking-\[0."]{color:var(--brass)!important;font-weight:700}
 .text-gold{color:var(--brass)}
-.bg-navy .text-gold,.from-navy .text-gold,.bg-navyDark .text-gold{color:#E3B864}
+.bg-navy .text-gold,.from-navy .text-gold,.bg-navyDark .text-gold{color:#b9e4e8}
 
 /* Header: light, hairline, no blur */
-header.sticky{background:rgba(250,248,244,.94)!important;color:var(--ink)!important;backdrop-filter:saturate(1.4) blur(10px);box-shadow:none!important;border-bottom:1px solid var(--stone)}
+header.sticky{background:rgba(238,238,238,.94)!important;color:var(--ink)!important;backdrop-filter:saturate(1.4) blur(10px);box-shadow:none!important;border-bottom:1px solid var(--stone)}
 header.sticky a{color:var(--ink)}
 header.sticky .text-goldLight{color:var(--brass)}
 header.sticky nav a{color:#394150;font-weight:600}
@@ -44,8 +44,8 @@ header.sticky .font-heading{font-weight:700;letter-spacing:-.01em}
 section.bg-gradient-to-br.from-navy{background-color:var(--navy)!important;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px}
 section.bg-gradient-to-br.from-navy .blur-3xl{display:none}
 section.bg-gradient-to-br.from-navy h1{color:#fff}
-section.bg-gradient-to-br.from-navy .text-goldLight,section.bg-gradient-to-br.from-navy h1 span{color:#E3B864}
-.rounded-full.border.border-gold\/40{border-radius:var(--r);background:transparent;border-color:rgba(227,184,100,.5)}
+section.bg-gradient-to-br.from-navy .text-goldLight,section.bg-gradient-to-br.from-navy h1 span{color:#b9e4e8}
+.rounded-full.border.border-gold\/40{border-radius:var(--r);background:transparent;border-color:rgba(185,228,232,.5)}
 
 /* Surfaces: hairline borders, small radius, no soft shadows */
 .rounded-2xl,.rounded-xl,.rounded-3xl{border-radius:10px!important}
@@ -71,7 +71,7 @@ a.bg-whatsapp{background:var(--wa)!important}
 a.bg-whatsapp:hover{background:#188a46!important}
 a.bg-gold{background:var(--gold)!important;color:var(--ink)!important}
 .ic{width:1.15em;height:1.15em;fill:currentColor;vertical-align:-.2em;flex:none}
-#floatWaBtn{background:var(--wa)!important;box-shadow:0 6px 20px rgba(15,23,34,.28)!important;animation:none!important;width:56px!important;height:56px!important}
+#floatWaBtn{background:var(--wa)!important;box-shadow:0 6px 20px rgba(7,27,43,.28)!important;animation:none!important;width:56px!important;height:56px!important}
 #floatWaBtn .ic{width:30px;height:30px}
 
 /* Trust strip under page heroes */
@@ -100,7 +100,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 /* Fixes after first visual review */
 header.sticky img[src*="logo-icon"]{background:var(--navy);padding:4px;border-radius:var(--r);width:2.25rem;height:2.25rem}
 [class*="from-navy"] div.rounded-2xl,[class*="from-navy"] div.rounded-xl,.bg-navy div.rounded-2xl{background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.18)!important}
-[class*="from-navy"] .text-gold,[class*="from-navy"] .text-goldLight{color:#E3B864}
+[class*="from-navy"] .text-gold,[class*="from-navy"] .text-goldLight{color:#b9e4e8}
 div.w-11.h-11.rounded-xl.bg-red-50,div.w-14.h-14.rounded-2xl.mx-auto,.bg-bg.rounded-2xl.border>.text-2xl.shrink-0{display:none}
 a .ic,button .ic{color:inherit}
 a[href^="tel:"] .ic,a[href^="https://wa.me"] .ic{color:currentColor}
@@ -127,3 +127,87 @@ span.text-pink-500 .ic,.text-pink-500 .ic,.text-rose-500 .ic{color:inherit}
   .msgal-wide{grid-column:span 2}
 }
 @media(prefers-reduced-motion:reduce){.msgal-item img{transition:none}.msgal-item:hover img{transform:none}}
+
+/* Palette: #071B2B dark, #167D8D teal, #B9E4E8 mint, #EEEEEE grey. Text on teal is white for contrast. */
+.bg-gold,a.bg-gold,button.bg-gold,.bg-gold.text-navyDark,a.bg-gold.text-navyDark{color:#fff!important}
+a.bg-gold{color:#fff!important}
+.bg-gold:hover,a.bg-gold:hover{background:#0f6573!important}
+section.bg-gradient-to-br.from-navy{background-image:linear-gradient(rgba(185,228,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(185,228,232,.05) 1px,transparent 1px),linear-gradient(135deg,#071b2b 0%,#0a2a3d 60%,#0d3a4a 100%)}
+
+/* ===== Header: dark bar, logo left, large nav right with dropdowns ===== */
+header.msh{position:sticky;top:0;z-index:60;background:#071b2b;color:#fff;border-bottom:1px solid rgba(185,228,232,.12)}
+.msh-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:24px;padding:0 24px;min-height:84px}
+.msh-logo{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.1;margin-right:auto}
+.msh-logo img{height:62px;width:auto;object-fit:contain}
+.msh-logo b{color:#b9e4e8;font-weight:700}
+.msh-nav{display:none}
+.msh-nav ul{list-style:none;margin:0;padding:0}
+.msh-nav>ul{display:flex;align-items:center;gap:6px}
+.msh-nav li{position:relative}
+.msh-nav a{display:block;padding:10px 12px;color:#fff;font-size:17px;font-weight:400;text-decoration:none;transition:color .15s}
+.msh-nav a:hover,.msh-nav a.on{color:#4cc3d3}
+.msh-nav .dd{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#0a2539;border:1px solid rgba(185,228,232,.18);border-radius:10px;padding:8px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.msh-nav .has-dd:hover>.dd,.msh-nav .has-dd:focus-within>.dd{display:block}
+.msh-nav .dd a{font-size:15px;padding:9px 12px;border-radius:6px;color:#e6f3f5}
+.msh-nav .dd a:hover{background:rgba(185,228,232,.1);color:#b9e4e8}
+.msh-cta{display:none;background:#167d8d;color:#fff!important;padding:10px 18px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
+.msh-cta:hover{background:#0f6573}
+.msh-m summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.msh-m summary::-webkit-details-marker{display:none}
+.msh-m summary span,.msh-m summary span::before,.msh-m summary span::after{display:block;width:24px;height:2px;background:#fff;position:relative;content:""}
+.msh-m summary span::before{position:absolute;top:-7px}.msh-m summary span::after{position:absolute;top:7px}
+.msh-mp{position:absolute;left:0;right:0;top:100%;background:#071b2b;border-top:1px solid rgba(185,228,232,.15);padding:8px 24px 18px;display:flex;flex-direction:column}
+.msh-mp a{color:#fff;text-decoration:none;padding:13px 0;font-size:17px;border-bottom:1px solid rgba(185,228,232,.1)}
+.msh-mp a.msh-mc{margin-top:12px;border:0;background:#167d8d;text-align:center;border-radius:8px;font-weight:700}
+@media(min-width:1024px){.msh-nav{display:block}.msh-m{display:none}.msh-cta{display:inline-block}}
+@media(min-width:1024px) and (max-width:1180px){.msh-cta{display:none}}
+@media(max-width:480px){.msh-logo img{height:52px}.msh-in{padding:0 16px;min-height:72px}}
+
+/* Hero stats: big, bright numbers that pop on the dark teal background */
+.msstat{display:block;font-family:var(--serif);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.15rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:4px;
+  background:linear-gradient(180deg,#ffffff 0%,#6df0ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 12px rgba(109,240,255,.35))}
+.msstat+span{color:#d7eef1!important;font-size:12px!important;font-weight:600;letter-spacing:.03em}
+
+/* Hero stats: one bright yellow so the numbers pop on the dark teal */
+.msstat{background-image:linear-gradient(180deg,#fff3a8 0%,#ffd400 100%)!important;filter:drop-shadow(0 0 12px rgba(255,212,0,.4))!important}
+
+/* Typewriter heading */
+.tw-c{visibility:hidden}
+.tw-c.on{visibility:visible}
+.tw-caret{display:inline-block;width:3px;height:.9em;margin-left:3px;vertical-align:-.08em;background:#ffd400;animation:twb .7s steps(1) infinite}
+@keyframes twb{50%{opacity:0}}
+
+/* Marquee strip under the hero */
+.msmq{background:#167d8d;color:#fff;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(7,27,43,.25)}
+.msmq-track{display:inline-flex;animation:msmq 55s linear infinite;will-change:transform}
+.msmq:hover .msmq-track{animation-play-state:paused}
+.msmq ul{display:flex;list-style:none;margin:0;padding:0;flex:none}
+.msmq li{display:flex;align-items:center;padding:14px 0;font-size:15px;font-weight:600;letter-spacing:.01em}
+.msmq li::after{content:"";width:7px;height:7px;margin:0 28px;background:#ffd400;transform:rotate(45deg);flex:none}
+@keyframes msmq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.msmq{white-space:normal}.msmq-track{animation:none;display:block}.msmq ul{flex-wrap:wrap;justify-content:center;padding:6px 16px}.msmq ul+ul{display:none}.msmq li{padding:6px 0}}
+
+/* Hero background video: fades in only once it is actually playing; otherwise the plain navy background stays */
+.msvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.msvid.on{opacity:1}
+.msvid-o{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,27,43,.82),rgba(7,27,43,.6));pointer-events:none;opacity:0;transition:opacity .8s ease}
+.msvid.on+.msvid-o{opacity:1}
+
+/* Call button under the hero stats */
+.mscall{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin:0 0 24px;padding:15px 20px;background:#167d8d;color:#fff!important;border-radius:10px;font-weight:700;font-size:18px;text-decoration:none;letter-spacing:.01em;box-shadow:0 8px 22px rgba(0,0,0,.28);transition:background .15s,transform .15s}
+.mscall:hover{background:#0f6573;transform:translateY(-1px)}
+.mscall.mscall-l{display:inline-flex;width:auto;margin:24px 0 0;padding:15px 34px}
+.mscall.mscall-l{padding:10px 22px;font-size:15px;border-radius:8px;margin-top:22px;box-shadow:none;transition:background .2s,color .2s,transform .2s,opacity .6s ease}
+.mscall.mscall-l:hover{background:#ffd400;color:#071b2b!important;transform:translateY(-2px)}
+/* Hidden until the heading finishes typing */
+.tw-on .mscall-l{opacity:0;transform:translateY(8px);pointer-events:none}
+.tw-on .mscall-l.show{opacity:1;transform:none;pointer-events:auto}
+.tw-on .mscall-l.show:hover{transform:translateY(-2px)}
+
+/* Home hero: full-screen banner height so the background video has room to show */
+.mshero{min-height:max(560px,calc(100vh - 84px - 52px));display:flex;align-items:center}
+.mshero>.relative.z-10{width:100%}
+@media(max-width:767px){.mshero{min-height:max(620px,calc(100vh - 72px - 52px))}}
+.msvid-o{background:linear-gradient(135deg,rgba(7,27,43,.7),rgba(7,27,43,.4))!important}
+.mshero h1,.mshero h1 span{color:#fff!important}

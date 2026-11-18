@@ -221,33 +221,70 @@ addEventListener('load',function(){setTimeout(go,6000);});
   }
 }
 </script>
-<style id="msbar-css">.msbar{display:none}@media(max-width:639px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}.msbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#0E1E38;box-shadow:0 -4px 16px rgba(0,0,0,.25)}.msbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;font:700 15px/1 Inter,system-ui,sans-serif;text-decoration:none;color:#fff}.msbar .msbar-call{background:transparent;border:1.5px solid rgba(255,255,255,.5)}.msbar .msbar-wa{background:#25D366}.msbar a:focus-visible{outline:3px solid #D4A13D;outline-offset:2px}}</style>
+<style id="msbar-css">.msbar{display:none}@media(max-width:639px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}.msbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#071b2b;box-shadow:0 -4px 16px rgba(0,0,0,.25)}.msbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;font:700 15px/1 Inter,system-ui,sans-serif;text-decoration:none;color:#fff}.msbar .msbar-call{background:transparent;border:1.5px solid rgba(255,255,255,.5)}.msbar .msbar-wa{background:#25D366}.msbar a:focus-visible{outline:3px solid #167d8d;outline-offset:2px}}</style>
 </head>
 <body class="font-sans bg-bg text-slate-800 antialiased selection:bg-goldLight selection:text-navyDark">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRFTVFX9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<header class="sticky top-0 z-50 bg-navy/90 backdrop-blur-md text-white shadow-lg shadow-black/10">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3.5">
-    <a href="/" class="flex items-center gap-2.5 font-heading font-extrabold text-lg">
-      <img src="/assets/logo-icon.webp" alt="MS Construction Services logo" width="72" height="72" loading="eager" decoding="async" class="w-9 h-9 object-contain shrink-0 rounded-lg">
-      MS <span class="text-goldLight">Construction</span>&nbsp;Services
+<header class="msh">
+  <div class="msh-in">
+    <a href="/" class="msh-logo" aria-label="MS Construction Services home">
+      <img src="/assets/logo-light.webp" alt="MS Construction Services" width="860" height="354" loading="eager" decoding="async">
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-200">
-      <a href="/" class="hover:text-goldLight transition">Home</a>
-      <a href="/services/" class="hover:text-goldLight transition">Services</a>
-      <a href="/areas/" class="hover:text-goldLight transition">Areas</a>
-      <a href="/projects/" class="hover:text-goldLight transition">Projects</a>
-      <a href="/about/" class="hover:text-goldLight transition">About</a>
-      <a href="/#faq" class="hover:text-goldLight transition">FAQs</a>
-      <a href="/#lead-form" class="hover:text-goldLight transition">Contact</a>
+    <nav class="msh-nav" aria-label="Main">
+      <ul>
+        <li><a href="/" data-m="home">Home</a></li>
+        <li class="has-dd"><a href="/services/" data-m="services">Services</a>
+          <ul class="dd">
+            <li><a href="/services/house-construction/">House Construction</a></li>
+            <li><a href="/services/grey-structure/">Grey Structure</a></li>
+            <li><a href="/services/turnkey-design-and-build/">Turnkey Design &amp; Build</a></li>
+            <li><a href="/services/architectural-design/">Architectural Design</a></li>
+            <li><a href="/services/interior-finishing/">Interior Finishing</a></li>
+            <li><a href="/services/home-renovation/">Home Renovation</a></li>
+            <li><a href="/services/commercial-construction/">Commercial Construction</a></li>
+            <li><a href="/services/project-management/">Project Management</a></li>
+            <li><a href="/services/overseas-pakistanis/">For Overseas Pakistanis</a></li>
+            <li><a href="/services/pricing/">Pricing &amp; Rates</a></li>
+          </ul></li>
+        <li class="has-dd"><a href="/areas/" data-m="areas">Areas</a>
+          <ul class="dd">
+            <li><a href="/areas/bahria-town-lahore/">Bahria Town</a></li>
+            <li><a href="/areas/lake-city-lahore/">Lake City</a></li>
+            <li><a href="/areas/dha-lahore/">DHA Lahore</a></li>
+            <li><a href="/areas/johar-town-lahore/">Johar Town</a></li>
+            <li><a href="/areas/gulberg-lahore/">Gulberg</a></li>
+            <li><a href="/areas/">All areas</a></li>
+          </ul></li>
+        <li class="has-dd"><a href="/projects/" data-m="projects">Projects</a>
+          <ul class="dd">
+            <li><a href="/projects/10-marla-house-lake-city-lahore/">10 Marla House, Lake City</a></li>
+            <li><a href="/projects/grey-structure-bahria-town-bb-block/">Grey Structure, Bahria Town</a></li>
+            <li><a href="/projects/">All projects</a></li>
+          </ul></li>
+        <li class="has-dd"><a href="/guides/" data-m="guides">Resources</a>
+          <ul class="dd">
+            <li><a href="/guides/">Construction Guides</a></li>
+            <li><a href="/guides/5-marla-house-construction-cost-in-lahore/">5 Marla Cost Guide</a></li>
+            <li><a href="/guides/10-marla-house-construction-cost-in-lahore/">10 Marla Cost Guide</a></li>
+            <li><a href="/guides/building-material-rates-in-lahore/">Material Rates</a></li>
+          </ul></li>
+        <li><a href="/about/" data-m="about">About</a></li>
+        <li><a href="/#lead-form" data-m="contact">Contact</a></li>
+      </ul>
     </nav>
-    <div class="flex gap-2.5 items-center">
-      <a class="hidden sm:inline-flex items-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition" href="tel:+923061982828"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg> 0306-1982828</a>
-    </div>
+    <details class="msh-m">
+      <summary aria-label="Open menu"><span></span></summary>
+      <div class="msh-mp">
+        <a href="/">Home</a><a href="/services/">Services</a><a href="/areas/">Areas</a><a href="/projects/">Projects</a><a href="/guides/">Resources</a><a href="/about/">About</a><a href="/#lead-form">Contact</a>
+        <a class="msh-mc" href="tel:+923061982828">Call 0306-1982828</a>
+      </div>
+    </details>
   </div>
 </header>
+<script>(function(){var p=location.pathname,m=p==='/'||p==='/index.html'?'home':p.split('/')[1];var a=document.querySelector('.msh-nav a[data-m="'+({services:'services',areas:'areas',projects:'projects',guides:'guides',about:'about',company:'services'}[m]||m)+'"]');if(a)a.className+=' on';})();</script>
 <main id="main">
 <nav aria-label="Breadcrumb" class="max-w-6xl mx-auto px-5 sm:px-6 pt-5 text-[13px] text-slate-300 flex gap-2 items-center"><a href="/" class="hover:text-goldLight transition">Home</a> <span class="text-slate-500">/</span> <span class="text-goldLight">Services</span></nav>
 <section class="relative overflow-hidden bg-gradient-to-br from-navy to-navyDark text-white pt-10 pb-14">
@@ -416,7 +453,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="bg-navyDark text-slate-400 py-9 text-[13.5px]">
   <div class="max-w-6xl mx-auto px-5 sm:px-6 flex flex-col sm:flex-row items-center sm:justify-between gap-4 text-center sm:text-left">
     <div>
-      <img src="/assets/logo-wordmark.webp" alt="MS Construction Services - From Dream To Reality" width="600" height="248" loading="lazy" decoding="async" class="h-10 sm:h-12 object-contain mb-3 mx-auto sm:mx-0">
+      <img src="/assets/logo-light.webp" alt="MS Construction Services" width="860" height="354" loading="lazy" decoding="async" class="h-10 sm:h-12 object-contain mb-3 mx-auto sm:mx-0">
       <div><strong class="text-white">MS Construction Services</strong> · Grey Structure, House &amp; Commercial Construction<br>Serving Lahore, Pakistan</div>
     </div>
     <div class="flex flex-col sm:items-end gap-2">
