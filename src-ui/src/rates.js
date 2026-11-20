@@ -15,7 +15,7 @@ export const SCOPES = [
   {
     id: 'grey',
     name: 'Grey structure',
-    min: 2500,
+    min: 2900,
     max: 3000,
     open: false,
     covers: 'Foundation, RCC frame, block or brick masonry, roof slabs, plaster and conduit placement.',
