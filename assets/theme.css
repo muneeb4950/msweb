@@ -20,7 +20,7 @@ main p.text-sm,main li.text-sm,main .text-sm p{font-size:.95rem;line-height:1.6}
 .max-w-4xl p{max-width:68ch}
 
 /* Headings read left-aligned like an article; no decorative bars */
-section h2.text-center,section h2.text-center+p,section .text-center>h2{text-align:left}
+section h2.text-center,section h2.text-center+p,section .text-center>h2{text-align:center}
 section h2.text-center+p.mx-auto,section p.max-w-2xl.mx-auto{margin-left:0;margin-right:0}
 div.w-16.h-\[3px\]{display:none}
 section .text-center>span.text-gold,section>div>span.text-gold.uppercase{display:block}
@@ -110,7 +110,7 @@ span.text-pink-500 .ic,.text-pink-500 .ic,.text-rose-500 .ic{color:inherit}
 .msgal{padding:4rem 0;background:#fff;border-top:1px solid var(--stone)}
 .msgal-eyebrow{display:block;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:.6rem}
 .msgal h2{margin:0 0 .75rem}
-.msgal-lead-p{max-width:62ch;color:var(--mute);margin:0 0 2rem}
+.msgal-lead-p{max-width:none;color:var(--mute);margin:0 0 2rem}
 .msgal-lead-p a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .msgal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .msgal-item{position:relative;margin:0;overflow:hidden;border-radius:8px;background:var(--stone);aspect-ratio:4/3}
@@ -211,3 +211,91 @@ header.msh{position:sticky;top:0;z-index:60;background:#071b2b;color:#fff;border
 @media(max-width:767px){.mshero{min-height:max(620px,calc(100vh - 72px - 52px))}}
 .msvid-o{background:linear-gradient(135deg,rgba(7,27,43,.7),rgba(7,27,43,.4))!important}
 .mshero h1,.mshero h1 span{color:#fff!important}
+/* Desktop: video sits on the right half, text on the left */
+@media(min-width:768px){
+.mshero .msvid{left:50%;width:50%;inset:0 0 0 50%}
+.mshero .msvid-o{left:50%;width:50%;inset:0 0 0 50%;background:linear-gradient(90deg,rgba(7,27,43,.85),rgba(7,27,43,.15) 35%)!important}
+}
+
+/* Home page: justify body paragraphs (not hero, centered or heading text) */
+main p.text-slate-600:not(.text-center),main p.text-slate-500:not(.text-center),main p.text-slate-700:not(.text-center){text-align:justify;text-justify:inter-word;hyphens:auto}
+main .mshero p{text-align:left}
+
+/* Services section: center card content to match the centered H2 */
+#services .grid>div{text-align:center}
+#services .grid>div p{text-align:center!important;hyphens:none}
+
+/* Mobile: hide hero call button (sticky bottom bar has Call now) */
+@media(max-width:767px){.mshero .mscall.mscall-l{display:none!important}}
+
+/* Services section heading block: centered */
+#services>div>span,#services>div>h2,#services>div>div.text-center{text-align:center!important}
+
+/* Service cards: lift + glow on hover */
+#services .grid>div{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,opacity .7s ease!important}
+#services .grid>div:hover{transform:translateY(-8px)!important;box-shadow:0 18px 40px rgba(7,27,43,.16)!important;border-color:#ffd400!important}
+#services .grid>div h3 a{transition:color .3s}
+#services .grid>div:hover h3 a{color:#167d8d}
+@media(prefers-reduced-motion:reduce){#services .grid>div:hover{transform:none!important}}
+
+/* Intro paragraphs under section headings: fill the container width at every screen size */
+main section h2.text-center+p.max-w-2xl,main section h2.text-center+p.max-w-xl{max-width:none!important;width:100%}
+
+/* Materials section heading block: centered */
+#materials .relative.z-10>span,#materials .relative.z-10>h2,#materials .relative.z-10>p{text-align:center!important}
+#materials .relative.z-10>p{max-width:42rem!important;margin-left:auto;margin-right:auto}
+
+/* Pricing section heading block: centered */
+#pricing>div>span,#pricing>div>h2,#pricing>div>p{text-align:center!important}
+#pricing>div>p{max-width:48rem!important;margin-left:auto;margin-right:auto}
+
+/* Pricing cards: lift + glow on hover, centered text */
+#pricing .grid>div{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,opacity .7s ease!important}
+#pricing .grid>div:hover{transform:translateY(-8px)!important;box-shadow:0 18px 40px rgba(7,27,43,.16)!important;border-color:#ffd400!important}
+#pricing .grid>div:hover h3{color:#167d8d}
+#pricing .grid>div h3{transition:color .3s}
+#pricing .grid>div p{text-align:center!important;hyphens:none}
+@media(prefers-reduced-motion:reduce){#pricing .grid>div:hover{transform:none!important}}
+
+/* Promise section: centered heading block + cards with hover animation */
+#promise>div>span,#promise>div>h2,#promise>div>p{text-align:center!important}
+#promise>div>p{max-width:36rem!important;margin-left:auto;margin-right:auto}
+#promise .grid>div{text-align:center;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,opacity .7s ease!important}
+#promise .grid>div p{text-align:center!important;hyphens:none}
+#promise .grid>div:hover{transform:translateY(-8px)!important;box-shadow:0 18px 40px rgba(7,27,43,.16)!important;border-color:#ffd400!important}
+#promise .grid>div h3{transition:color .3s}
+#promise .grid>div:hover h3{color:#167d8d}
+@media(prefers-reduced-motion:reduce){#promise .grid>div:hover{transform:none!important}}
+
+/* Service areas heading block: centered */
+#service-areas>div>span,#service-areas>div>h2,#service-areas>div>p{text-align:center!important}
+#service-areas>div>p{max-width:none!important}
+#service-areas>div>p:nth-of-type(1){max-width:36rem!important;margin-left:auto;margin-right:auto}
+#service-areas>div>p:nth-of-type(2){max-width:52rem!important;margin-left:auto;margin-right:auto}
+
+/* Timeline section heading block: centered */
+#timeline>div>span,#timeline>div>h2,#timeline>div>p{text-align:center!important}
+#timeline>div>p{max-width:40rem!important;margin-left:auto;margin-right:auto}
+#service-areas>div>p:nth-of-type(1){max-width:52rem!important}
+
+/* Quality cards: lift + glow on hover; left-aligned text without justify gaps */
+#quality .grid>div{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,opacity .7s ease!important}
+#quality .grid>div:hover{transform:translateY(-8px)!important;box-shadow:0 18px 40px rgba(7,27,43,.16)!important;border-color:#ffd400!important}
+#quality .grid>div h3{transition:color .3s}
+#quality .grid>div:hover h3{color:#167d8d}
+#quality .grid>div p{text-align:left!important;hyphens:none}
+@media(prefers-reduced-motion:reduce){#quality .grid>div:hover{transform:none!important}}
+
+/* Footer contact lines: icon sits inline, in front of the text */
+footer .ic{display:inline-block;margin-right:.35em}
+
+/* Reviews section heading block: centered */
+#reviews>div>span,#reviews>div>h2,#reviews>div>p{text-align:center!important}
+
+/* Quality section heading block: centered */
+#quality>div>span,#quality>div>h2,#quality>div>p{text-align:center!important}
+#quality>div>p{max-width:42rem!important;margin-left:auto;margin-right:auto}
+
+/* All section headings (and their intro lines) centered */
+main section h2,main section h2+p{text-align:center}
+main section h2+p{margin-left:auto;margin-right:auto}
